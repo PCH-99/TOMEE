@@ -1,0 +1,987 @@
+@font-face 
+{
+	font-family: CaviarDreams;
+	src: url(CaviarDreams_Bold.ttf);
+}
+
+body {
+	margin: 1%;
+	font-family: CaviarDreams;
+	font-size: 19px;
+}
+
+.new_post {
+	resize: none;
+	outline: none;
+	width: 90%;
+	min-height: 300px;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 20px;
+	border: 10px solid #fff;
+	background-color: #cef5f5;
+}
+
+textarea::placeholder {
+	text-align: center;
+	font-size: 20px;
+}
+
+.container {
+	position: fixed;
+	max-width: 100% !important;
+	height: 98%;
+	overflow-y: scroll;
+	top: 0;
+	left: 0;
+	padding-bottom: 5px;
+}
+
+.formularz_log {
+	border-radius: 20px;
+	background-color: #fff;
+	border: 10px solid #cef5f5;
+	padding: 2% 3% 0 3%;
+	min-height: 100px;
+}
+
+.info_user {
+	border-radius: 20px;
+	background-color:#cef5f5;
+	border: 5px solid #fff;
+	height: 60px;
+	overflow-y: hidden;
+	transition: all .5s ease-in-out;
+}
+
+.formularz_log > form {
+	border: 5px solid #fff;
+	border-radius: 20px;
+	background-color: #cef5f5;
+	padding: 4%;
+}
+
+input, label {
+	display: block !important;
+	margin: 1% auto 2% auto;
+}
+
+input[type=submit], .watches {
+	border: 5px solid white;
+	border-radius: 20px;
+	background-color: #f086ad;
+	font-size: 19px;
+	letter-spacing: 1px;
+	transition: all .2s ease-in-out;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+.navb {
+	font-size: 3vw;
+}
+
+.navb > a {
+	text-decoration: none;
+	color: black;
+}
+
+.navb > a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+.footer > a, .zglos {
+	text-decoration: none;
+	color: white;
+}
+
+.footer > a:hover, .zglos:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.header {
+	font-size: 4vw;
+}
+
+@media (min-width: 575px) {
+	.header {
+	font-size: 2.5vw;
+	}
+	
+	.navb {
+	font-size: 2vw;
+	}
+	
+	.formularz_log {
+	padding-top: 3%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.header {
+	font-size: 2vw;
+	}
+	
+	.navb {
+	font-size: 1.5vw;
+	}
+}
+
+input[type=submit]:hover {
+	transform: scale(1.1);
+	background-color: #fff;
+	color: #ed8ed9;
+	border: 5px solid #ed8ed9;
+}
+
+#wrap_bio:hover {
+	transform: scale(1.1);
+}
+
+#settings > span:hover {
+	background-color: #cef5f5;
+	cursor: pointer;
+}
+
+input:focus {
+	outline: none;
+}
+
+label > input {
+	border: 1px solid white;
+	border-radius: 20px;
+	height: 30px;
+	font-size: 13px;
+}
+
+p {
+	font-size: 12px;
+	margin-bottom: 3px;
+}
+
+a>img {
+	transition: all .2s ease-in-out;
+}
+
+a>img:hover {
+	transform: scale(1.07);
+}
+
+.footer {
+	font-size: 15px;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	margin: 20px auto 0 auto;
+	transition: all .55s ease-in-out;
+}
+
+.infolog {
+	padding: 10px;
+}
+
+.belka {
+	background-color: #fff;
+	width: 100%;
+	position: fixed;
+	left: 2%;
+	top: 0;
+	z-index: 1;
+}
+
+.sticky {
+	width: 100%;
+	position: fixed;
+	left: 2%;
+	top: 0;
+	z-index: 1;
+}
+
+.szukaj {
+	width: 80%;
+}
+
+.szukaj > form > label > input {
+	background-color: #cef5f5;
+	color: #3b373a;
+	width: 100%;
+	padding: 0 15px 0 10px;
+}
+
+.header > div {
+	text-decoration: none;
+	color: black;
+	display: block;
+	transform: scale(1.5);
+}
+
+button {
+	border: none;
+	border-radius: 20px;
+	background-color: #fff;
+}
+
+button:focus {
+	outline: none;
+}
+
+.img-search {
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in-out;
+}
+
+.hidden_set {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 2;
+	right: 4%;
+	top: 12%;
+	font-size: 10px;
+	border: 0 solid #cef5f5;
+	border-radius: 20px;
+	background-color: #fff;
+	transition: all .5s ease-in-out;
+}
+
+.show_set {
+	width: 35%;
+	height: auto;
+	z-index: 2;
+	border: 5px solid #cef5f5;
+	font-size: 3vw;
+	padding: 1%;
+}
+
+.hidden_set > ul > li {
+	list-style-type: none;
+	border-radius: 20px;
+	background-color: #cef5f5;
+	margin: 8% 5% 8% 5%;
+	padding: 3%;
+	transition: all .3s ease-in-out;
+}
+
+.hidden_set > ul > li > a, .username > a, .proponowane_konta > a {
+	text-decoration: none;
+	color: black;
+}
+
+.hidden_set > ul > li:hover ,.username:hover, .img-search:hover{
+	transform: scale(1.1);
+}
+
+.poster, .poster_inloct, .poster_users {
+	border-radius: 50%;
+	margin: 3%;
+	width: 65px;
+	height: 65px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #cef5f5;
+	background-size: cover;
+	border: 4px solid white;
+}
+
+.poster_inloct {
+	width: 7vh;
+	height: 7vh;
+	border: 4px solid #f086ad;
+	float: left;
+	margin: 0%;
+}
+
+.nick_inloct {
+	margin-left: 10px;
+	padding-top: 10px;
+	float: left;
+	height: 40px;
+}
+
+.img {
+	 background-image: url('../img/user.svg');
+}
+
+.main-img {
+	width: 120px;
+	height: 120px;
+	border: 5px solid white;
+}
+
+.tlo_profilowe {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-image: url('../img/default_wallpaper_user.jpg');
+	color: white;
+	border: 5px solid white;
+}
+
+.username {
+	background-color: #f086ad;
+	color: #fff;
+	border: 6px solid #fff;
+	border-radius: 20px;
+	width: 50%;
+	margin: 0 auto 2% auto;
+	font-size: 12px;
+	padding: 1%;
+	transition: all .3s ease-in-out;
+	letter-spacing: 2px;
+}
+
+.userpage_container {
+	height: 91%;
+}
+
+.watches {
+	font-size: 11px;
+	letter-spacing: 1px;
+	padding: 1% 2%;
+}
+
+.open_bio {
+	height: 540px !important;
+}
+
+.bio_center {
+	height: 350px;
+}
+
+.bio {
+	margin: 2%;
+	background-color: white;
+	padding: 2%;
+	margin-top: 5vh;
+	border-radius: 20px;
+	font-size: 11px;
+}
+
+.bio > .row > .col-6 > div {
+	text-align: left;
+	border-radius: 20px;
+	background-color: #cef5f5;
+	margin: 4%;
+	padding: 4% 8%;
+}
+
+.main_post {
+	border-radius: 20px;
+	background-color:#cef5f5;
+	border: 5px solid #fff;
+	font-size: 9px;
+	letter-spacing: 1px;
+	position: relative;
+}
+
+.autor_posta {
+	top: 25%;
+	font-size: 12px;
+	position: absolute;
+}
+
+.tresc_posta {
+	border-radius: 20px;
+	background-color:#fff;
+	font-size: 11px;
+	font-weight: 300;
+	text-align: left;
+	resize: none;
+	outline: none;
+	border: #fff;
+	overflow-wrap: break-word;
+}
+
+.interactive_post > .classkom, .close_comm, .zaczete_rozmowy{
+	transition: all .35s ease-in-out;
+}
+
+.zaczete_rozmowy {
+	background-color: #cef5f5;
+}
+
+.interactive_post > .classkom:hover, .close_comm:hover, .proponowane_konta:hover, .zaczete_rozmowy:hover {
+	transform: scale(1.1);
+}
+
+.close_comm {
+	border: 6px solid #e67aa9;
+	border-radius: 20px;
+	background-color: #fff;
+	position: fixed;
+	z-index: 2;
+	opacity: 1;
+	top: 8%;
+	left: 5%;
+	opacity: 0;
+	transition: all .5s ease-in-out;
+	font-size: 10px;
+}
+
+.nocomments {
+	position: fixed;
+	width: 0;
+	height: 0;
+	top: 15%;
+	left: 8%;
+	z-index: 1;
+	transition: all .5s ease-in-out;
+	overflow-y: scroll;
+}
+
+.comments {
+	border: 8px solid #e67aa9;
+	border-radius: 20px;
+	background-color: #fff;
+	width: 86%;
+	padding-top: 20px;
+	height: 80%;
+}
+
+.dodawanie_komm {
+	transition: all .4s ease-in-out;
+	font-size: 0;
+	border: 5px solid #fff;
+}
+
+.comment {
+	padding-left: 10px !important;
+	width: 90%;
+	border-radius: 20px;
+	background-color:#cef5f5;
+	font-size: 10px;
+	font-weight: 400;
+	text-align: left;
+	min-height: 10%;
+}
+
+.tresc_komm {
+	border-radius: 20px;
+	background-color:#fff;
+	font-size: 9px;
+	font-weight: 300;
+    overflow-wrap: break-word;
+}
+
+.propozycje {
+	border-radius: 20px;
+	background-color: #cef5f5;
+	border: 5px solid #fff;
+	font-size: 9px;
+}
+
+.proponowane_konta {
+	padding: 0;
+	text-align: center;
+	margin: 3% 0 2% 0;
+	transition: all .3s ease-in-out;
+}
+
+.zaczete_rozmowy {
+	border-radius: 20px;
+	border: 5px solid #fff;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+
+.look_profile {
+	float: left;
+	height: 60px;
+	margin: 0 3% 0 3%;
+}
+
+.p {
+	font-size: 18px;
+	height: 60px;
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.main_conv {
+	min-height: 64px;
+	border: 5px solid #e67aa9;
+}
+
+.conv2 {
+	width: 75%;
+}
+
+.conv_data {
+	margin-top: 5px;
+	opacity: 0.8;
+	font-size: 11px;
+}
+
+.konwersacje_div {
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.konwersacje {
+	width: 100%;
+	height: 30px;
+	display: table-cell;
+    vertical-align: middle;
+	font-size: 15px;
+	background-color: #f086ad;
+	border-radius: 20px;
+	color: #fff;
+	padding: 5px 8px 0 8px;
+	border: 0px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.poster_users {
+	width: 60px;
+	height: 60px;
+	border: 6px solid #f086ad;
+	float: left;
+	margin: 0%;
+}
+
+.form_propos {
+	padding: 1vw;
+	border-radius: 20px;
+	border: 5px solid #fff;
+	background-color: #f086ad;
+	color: #fff;
+	width: 20vw;
+	font-size: 2.5vw;
+}
+
+.add_comm {
+	border-radius: 20px;
+	background-color: #cef5f5;
+	border: 1px solid #cef5f5;
+}
+
+.font-plus {
+	transition: all .2s ease-in-out;
+}
+
+.font-plus:hover {
+	transform: scale(1.2);
+	background-color: #fff;
+}
+
+#potwierdz {
+	width: 70%;
+	border-radius: 20px;
+	background-color: red;
+	border: 7px solid #fff;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+.delete_user_button {
+	border-radius: 20px;
+	background-color: red;
+	color: #fff; 
+}
+
+#rezygnacja {
+	width: 70%;
+	border-radius: 20px;
+	background-color: green;
+	border: 7px solid #fff;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+.usuwanie {
+	border-radius: 20px;
+	background-color: #fff;
+	border: 7px solid red;
+	font-size: 25px;
+	color: red;
+	text-align: center;
+	transition: all .3s ease-in-out;
+	min-height: 1px;
+}
+
+.pomoc {
+	text-align: center;
+	transition: all .3s ease-in-out;
+	border: 5px solid #cef5f5;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.support_mail {
+	font-size: 20px;
+	text-decoration: underline;
+	color: #324;
+}
+
+.usuwanie:hover, #potwierdz:hover, #rezygnacja:hover, .pomoc:hover {
+	transform: scale(1.1);
+}
+
+.delete {
+	position: fixed;
+	text-align: center;
+	padding: 3%;
+	top: -450px;
+	left: 18%;
+	transition: all .3s ease-in-out;
+	width: 60%;
+	margin: 0 auto;
+	border-radius: 20px;
+	background-color: #cef5f5;
+	border: 7px solid #fff;
+	font-size: 15px;
+}
+
+.showdelete {
+	top: 100px;
+}
+
+.support-mail {
+	font-size: 2%;
+}
+
+.input_pass {
+	border: 1px solid white;
+	border-radius: 20px;
+	height: 30px;
+	font-size: 13px;
+	background-color: #fff;
+}
+
+.input_pass i {
+	cursor: pointer;
+}
+
+.div_pass {
+	border-radius: 20px;
+	background-color: #fff;
+}
+
+#show_password_icon, #show_password_r_icon {
+	transition: all .3s ease-in-out;
+}
+
+.brak_postow {
+	border-radius: 20px;
+	border: 6px solid white;
+	background-color: #cef5f5;
+}
+
+.conversation {
+	border-radius: 20px;
+	background-color:#cef5f5;
+	border: 8px solid #fff;
+	height: 84vh;
+}
+
+.top_conver {
+	height: 8vh;
+	background-color: #fff;
+	width: 100%;
+	font-size: 2.5vh;
+}
+
+.content_conver {
+	width: 100%;
+	float: left;
+	height: 63vh;
+	margin: 0 0 1vh 0;
+	font-size: 2vh;
+	overflow-y: scroll;
+}
+
+.send_conver {
+	width: 80%;
+	margin: 0 auto 0 auto;
+	height: 7vh;
+	font-size: 3vh;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.input_messg {
+	height: 7vh;
+	width: 75%;
+	float: left;
+	border-radius: 20px;
+}
+
+.input_area {
+	height: 6vh;
+	width: 100%;
+	border-radius: 20px;
+	padding-left: 8px;
+	border: 0 solid #fff;
+}
+
+.send_messg {
+	height: 7vh;
+	font-size: 4vh;
+	width: 15%;
+	float: right;
+	border-radius: 20px;
+	text-align: right;
+}
+
+.p_conv {
+	font-size: 3vh;
+	height: 7vh;
+	display: table-cell;
+    vertical-align: middle;
+	margin-bottom: 0;
+}
+
+#send_messg {
+	font-size: 4.5vh;
+	transition: all .3s ease-in-out;	
+}
+
+.messages {
+	border: 5px solid white;
+	background-color: #f086ad;
+	border-radius: 20px;
+	padding: 6px 8px 6px 8px;
+	color: white;
+	transition: all .3s ease-in-out;
+	max-width: 60%;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+}
+
+.text-wrap {
+    overflow-wrap: break-word;
+}
+
+.null_conver {
+	opacity: 0.5;
+	margin-top: 50vh;
+}
+
+.old_news {
+	opacity: 0.5;
+	margin-top: 1vh;
+}
+
+.old_news:hover 
+{
+	opacity: 0.9;
+}
+
+.last {
+	opacity: 0;
+	transition: all .55s ease-in-out;	
+}
+
+.add_post {
+	text-decoration: none;
+	transition: all .25s ease-in-out;	
+}
+
+.add_post > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.add_post:hover {
+	transform: scale(1.1);
+}
+
+.log {
+	position: relative;
+	transition: all .55s ease-in-out;
+	border: 10px solid #cef5f5;
+}
+
+.log1 {
+	border: 0px;
+}
+
+.reg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 0px;
+	opacity: 0;
+	transition: all .55s ease-in-out;
+	overflow: hidden;
+}
+
+.reg1 {
+	height: auto;
+	opacity: 1;
+}
+
+.footer1 {
+	margin-top: 275px;
+}
+
+@media (min-width: 600px) {
+	.show_set {
+	font-size: 2.5vw;
+	width: 30%;
+	}
+	
+	.send_conver {
+	width: 75%;
+	}
+	
+	.tlo_profilowe {
+	border: 7px solid white;
+	}
+	
+	.info_user {
+	height: 80px;
+	border: 7px solid white;
+	}
+	
+	.username {
+	width: 45%;
+	font-size: 15px;
+	}
+	
+	.watches {
+	font-size: 13px;
+	}
+	
+	.open_bio {
+	height: 670px !important;
+	}
+	
+	.poster {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.main-img {
+	width: 150px;
+	height: 150px;
+	border: 7px solid white;
+	}
+	
+	.close_comm, .comment{
+		font-size: 12px;
+	}
+	
+	.tresc_komm {
+		font-size: 11px;
+	}
+	
+	.propozycje, textarea {
+	font-size: 12px;
+	}
+}
+
+@media (min-width: 850px) {
+	.close_comm, .comment{
+		font-size: 13px;
+	}
+	
+	.send_conver {
+	width: 65%;
+	}
+	
+	.tresc_komm {
+		font-size: 12px;
+	}
+	
+	.show_set {
+		font-size: 2vw;
+		width: 20%;
+	}
+	
+	.main-img {
+	width: 200px;
+	height: 200px;
+	border: 10px solid white;
+	}
+	
+	.tlo_profilowe {
+	border: 10px solid white;
+	}
+	
+	.info_user {
+	height: 100px;
+	border: 7px solid white;
+	}
+	
+	.username {
+	width: 40%;
+	font-size: 18px;
+	}
+	
+	.watches {
+	font-size: 16px;
+	}
+	
+	.propozycje, textarea {
+	font-size: 14px;
+	}
+	
+	.form_propos {
+		font-size: 2vw;
+	}
+	
+}
+
+@media (min-width: 1100px) {
+	.close_comm, .comment{
+		font-size: 14px;
+	}
+	
+	.show_set {
+		font-size: 1vw;
+		width: 15%;
+	}
+	
+	.main-img {
+	width: 250px;
+	height: 250px;
+	}
+	
+	.username {
+	width: 35%;
+	font-size: 21px;
+	}
+	
+	.watches {
+	font-size: 19px;
+	}
+	
+	.open_bio {
+	height: 770px !important;
+	}
+	
+	.main_post {
+		font-size: 11px;
+	}
+	
+	.autor_posta {
+		font-size: 15px;
+	}
+	
+	.tresc_posta {
+		font-size: 13px;
+	}
+	
+	.propozycje, textarea {
+	font-size: 16px;
+	}
+}
+
+@media (min-width: 1199px) {
+	.open_bio {
+	height: 430px !important;
+	}
+}
+
+

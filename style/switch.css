@@ -1,0 +1,50 @@
+.switch {
+  display: flex;
+  width: 15vw;
+  height: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0 auto;
+}
+
+.toggle {
+  margin-top: 70px;
+  margin-bottom: 90px;
+}
+.toggle input[type=checkbox] {
+  display: none !important;
+}
+.toggle label {
+  color: #fff;
+  position: relative;
+}
+.toggle input[type=checkbox] + label::before {
+  content: " ";
+  display: block;
+  height: 18px;
+  width: 55px;
+  border: 1px solid #bde4e4;
+  border-radius: 9px;
+  position: absolute;
+  top: 0px;
+  left: -35px;
+  background: #fff;
+}
+.toggle input[type=checkbox] + label::after {
+  content: " ";
+  display: block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #f086ad;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: -45px;
+  background: #f086ad;
+  transition: all 0.3s ease-in;
+}
+.toggle input[type=checkbox]:checked + label::after {
+  left: -8px;
+  transition: all 0.3s ease-in;
+}
